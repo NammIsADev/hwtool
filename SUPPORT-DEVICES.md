@@ -17,4 +17,4 @@
 - You can use the Mate 10 Lite Recovery/ROM on Nova 2i / Honor 9i devices without issue. (or yes😣)
 - For the most reliable and tested devices, refer to the official PotatoNV repository: [PotatoNV - Tested Devices](https://github.com/mashed-potatoes/PotatoNV?tab=readme-ov-file#tested-devices).
 - The board may list some devices with compatible chipsets, but not all listed devices have been tested or confirmed to work.
-
+- ROM MUST BE AS SYSTEM.IMG. OR ELSE YOU NEED TO FLASH WITH TWRP.
