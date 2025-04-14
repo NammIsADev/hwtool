@@ -14,7 +14,7 @@
 <details>
   <summary>Open it!</summary>
 
-- [Disclaimer](#-disclaimer)
+- [Disclaimer](#%EF%B8%8F-disclaimer)
 - [What is HWTool?](#-what-is-hwtool)
 - [How HWTool Works](#-how-hwtool-works)
 - [Features](#-features)
