@@ -55,12 +55,14 @@ HWTool provides efficient solutions for bootloader unlocking, flashing recoverie
 
 # ❓ How HWTool Works
 
-## 🛠 How PotatoNV Works
+### 🛠 How PotatoNV Works
 [Click here for more info](https://github.com/mashed-potatoes/PotatoNV?tab=readme-ov-file#how-it-works)
 
----
 
-## 📋 How HWTool Works
+### 📋 How HWTool Works
+<details>
+  <summary>How HWTOOL Works??</summary>
+
 HWTool guides you step-by-step, automating the process using **ADB** and **Fastboot** tools. Here’s what it does:
 
 1. **Setup:**
@@ -82,6 +84,8 @@ HWTool guides you step-by-step, automating the process using **ADB** and **Fastb
 5. **Recovery and ROM Installation:**
    - Guides you through flashing TWRP recovery and installing your selected ROM onto the system.
    - Ensures correct partitioning and compatibility to prevent errors.
+
+</details>
 
 ---
 
@@ -106,6 +110,9 @@ HWTool guides you step-by-step, automating the process using **ADB** and **Fastb
 4. Backup all important data to avoid any loss during the process.
 
 ### 🛠 Steps:
+<details>
+  <summary>WHAT????</summary>
+
 1. Verify your device is listed in the [Supported Devices List](https://github.com/NammIsADev/hwtool/blob/main/SUPPORT-DEVICES.md).
 2. Install PotatoNV and follow HWTool instructions to unlock your bootloader.
    2.1. This process can potentially brick your device if not followed carefully.
@@ -179,6 +186,8 @@ HWTool guides you step-by-step, automating the process using **ADB** and **Fastb
 > [!TIP]
 > If you are using a **Nova 2i / Honor 9i**, you CAN apply Mate 10 Lite Recovery/ROM for compatibility.
 
+</details>
+
 ---
 
 ## 📱 Supported Devices
@@ -205,6 +214,8 @@ If you encounter issues or have suggestions, feel free to submit an issue or pul
 ---
 
 ## 🔧 Troubleshooting
+<details>
+  <summary>dont panic pls</summary>
 
 Encountering issues while using HWTool? Don't panic. Here’s a detailed guide to help you resolve common problems:
 
@@ -271,6 +282,8 @@ Encountering issues while using HWTool? Don't panic. Here’s a detailed guide t
   - Use a magnifying glass or similar tool to pinpoint the exact testpoint location.
   - Be cautious when handling planar cables or other fragile components during disassembly.
   - If disassembly proves too challenging, consider using paid software that supports "software testpoint."
+
+</details>
 
 ---
 
