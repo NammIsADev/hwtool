@@ -2,7 +2,7 @@
 
 # HWTool (Huawei Kirin Tool)
 
-![HWTool Logo](logo.png)
+![HWTool Logo](hwinfo.png)
 
 💻 **HWTool** is the ultimate assistant for unlocking Huawei bootloaders. It supports a wide range of Kirin chipset devices and offers customization features such as flashing TWRP, installing custom ROMs, and more.
 
