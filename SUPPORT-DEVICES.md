@@ -1,4 +1,4 @@
-# Supported Huawei Devices for Bootloader Unlocking
+# 📱 Supported Huawei Devices for Bootloader Unlocking
 
 | **Kirin Chipset**    | **Device Models**                                                                                       | **Notes**                                                                                  |
 |-----------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
@@ -10,7 +10,7 @@
 | **Kirin 950**        | Honor 8 Pro / V9 (DUK), Honor 8 (FRD), Huawei P9 Standard (EVA)                                             | High-performance smartphones with advanced camera capabilities.                          |
 | **Kirin 960**        | Honor 9 (STF), Huawei Mate 9 Pro (LON), Huawei Mate 9 (MHA), Huawei MediaPad M5 (CMR), Huawei Nova 2s (HWI), Huawei P10 (VTR) | Flagship devices; designed for performance, multitasking, and multimedia experiences.    |
 
-**Additional Notes:**
+ℹ️ **Additional Notes:**
 - Devices with the “Kirin 65x” chipset group are broad, including variants like Kirin 655, 658, and 659, and include **A/B variants**.
 - The Nova 2i / Honor 9i is marketed as the Mate 10 Lite in some regions.
 - Compatibility depends on EMUI versions (tested on EMUI 8 and 9). EMUI 10 or later is not verified yet.
