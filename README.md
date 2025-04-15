@@ -16,12 +16,15 @@
 - [ ] reach 100 star
 - [x] fix bugs
 - [x] done (basic) README
+- [ ] done (advanced) README
 - [x] add LICENSE
-- [ ] complete wiki and the issue template
+- [ ] complete wiki and the issue template (just the template)
 - [ ] add tags to README
 - [ ] developing
 - [x] sleep
 - [ ] release stable version
+
+ts pmo 💔
 
 ---
 ## 📜 Table of Contents
