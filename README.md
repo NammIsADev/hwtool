@@ -300,7 +300,9 @@ The development and success of HWTool are supported by a combination of helpful 
 - **Notepad++:** For script creation and editing.
 - **ADB & Fastboot:** For device communication and system management.
 - **PotatoNV:** The bootloader unlock utility for Huawei devices.
+- **OpenKirin:** For supported device list
 - **Google & YouTube:** Essential for researching testpoint locations, device compatibility, and finding tutorials.
+- bonus: **MY PHONE**
 
 These resources have played a vital role in ensuring HWTool simplifies the unlocking and customization processes for Huawei devices.
 
