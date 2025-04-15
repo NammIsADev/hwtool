@@ -13,6 +13,12 @@
 - [ ] make updater
 - [ ] reach 100 star
 - [x] fix bugs
+- [x] done README
+- [ ] add LICENSE
+- [ ] complete wiki and the issue template
+- [ ] add tags to README
+- [ ] developing
+- [x] sleep
 
 ---
 ## 📜 Table of Contents
