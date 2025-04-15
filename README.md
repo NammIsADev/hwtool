@@ -8,6 +8,12 @@
 
 💻 **HWTool** is the ultimate assistant for unlocking Huawei bootloaders. It supports a wide range of Kirin chipset devices and offers customization features such as flashing TWRP, installing custom ROMs, and more.
 
+![Development Status](https://img.shields.io/badge/Status-Active%20Development-blue)
+![App Version](https://img.shields.io/badge/Version-1.0.0-green)
+![Release Channel](https://img.shields.io/badge/Release%20Channel-Beta-orange)
+![Bootloader Unlock](https://img.shields.io/badge/Kirin%20Bootloader%20Unlock-Supported-blue)
+![Custom ROM Support](https://img.shields.io/badge/Custom%20ROM%20and%20Recovery-Supported-purple)
+
 </div>
 
 ---
@@ -16,10 +22,10 @@
 - [ ] reach 100 star
 - [x] fix bugs
 - [x] done (basic) README
-- [ ] done (advanced) README
+- [x] done (advanced) README
 - [x] add LICENSE
-- [ ] complete wiki and the issue template (just the template)
-- [ ] add tags to README
+- [ ] complete wiki and the issue template (just the issue template get done)
+- [x] add tags to README
 - [ ] developing
 - [x] sleep
 - [ ] release stable version
