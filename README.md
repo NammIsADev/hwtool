@@ -24,7 +24,7 @@
 - [x] sleep
 - [ ] release stable version
 
-ts pmo 💔
+icl ts pmo sm n sb rn ngl, ru srsly srs n fr rn vro? lol atp js go b fr vro, idek nm, brb gng gtg atm Imao, bt ts pyo 2 js Imk lol onb fr nty b fr rn lk 💔💔💔
 
 ---
 ## 📜 Table of Contents
