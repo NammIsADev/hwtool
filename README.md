@@ -114,6 +114,15 @@ For more details, refer to the [PotatoNV GitHub repository](https://github.com/m
 1. **Access the Motherboard:** Disassemble your device to access the testpoint contacts.  
 2. **Experience Check:**  
    - If unsure about your ability to disassemble the device safely, consider using paid software that supports "software testpoint."
+   - Example image:
+
+  ![image](https://github.com/user-attachments/assets/59458023-0b57-4f70-812d-321ae0475d2c)
+
+  **The marks may vary:**
+  + Only one point is marked in the photo.
+  + In the photo, a line is drawn between the point and the metal shield.
+  + In the photo, a line is drawn between two points.
+
 3. **Watch Video Guides:** Refer to online video manuals to understand the disassembly process.  
 4. **Handle Components Carefully:** Be cautious with cables and fragile parts.
 
