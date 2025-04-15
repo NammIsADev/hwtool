@@ -4,6 +4,8 @@
 
 ![HWTool Logo](hwtool.png)
 
+*"The Sweden Swift Knife for Vanilla Kirin Bootloader Unlocking."*
+
 💻 **HWTool** is the ultimate assistant for unlocking Huawei bootloaders. It supports a wide range of Kirin chipset devices and offers customization features such as flashing TWRP, installing custom ROMs, and more.
 
 </div>
@@ -14,7 +16,7 @@
 - [ ] reach 100 star
 - [x] fix bugs
 - [x] done (basic) README
-- [ ] add LICENSE
+- [x] add LICENSE
 - [ ] complete wiki and the issue template
 - [ ] add tags to README
 - [ ] developing
