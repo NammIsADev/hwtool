@@ -18,6 +18,10 @@
 </div>
 
 ---
+
+> [!WARNING]
+> **THIS IS A BETA BRANCH, IF YOU WANT TO TRY NEW THING, DOWNLOAD THE SOURCE**
+
 ## 📃 TO-DO List
 - [ ] make updater (69420 days left)
     - in this time you need to check updates manually (i dont want to make a updater)
