@@ -64,13 +64,9 @@ echo        - Kirin 935
 echo        - Kirin 950
 echo        - Kirin 960
 pause
+cls
 
-echo.
-echo [32m========================================================================[0m
-echo [32m      Huawei Bootloader Unlock Script (PotatoNV & Fastboot)[0m
-echo [32m========================================================================[0m
-echo.
-
+call logo
 REM -------------------------------------------------------------------------
 REM 1. Device Preparation
 REM -------------------------------------------------------------------------
@@ -102,6 +98,10 @@ echo.
 echo    [36me. If the "OEM unlocking" option is missing or grayed out, this often indicates that PotatoNV is required,[0m
 echo        however, it may also indicate other issues preventing bootloader unlocking.  Consult device-specific resources.
 echo.
+pause
+cls
+call logo
+echo.
 echo    [36mf. Install Huawei USB Drivers on your computer (if not already installed).[0m
 echo        Download HiSuite from: https://consumer.huawei.com/en/support/hisuite/
 echo        You may also need to install Huawei Testpoint Drivers.  These drivers may require Test Mode in Windows.
@@ -116,6 +116,7 @@ echo        You can find Huawei TestPoint drivers here:
 echo        https://files.dc-unlocker.com/share.html?v=share/18B15B9D02C945A79B1967234CECB423
 echo.
 echo    [36mg. Download the PotatoNV tool for your device from a trusted source and extract to "bin" folder.[0m
+echo        https://github.com/mashed-potatoes/PotatoNV
 echo.
 echo    [36mh. Download the custom ROM and recovery image files (e.g., system.img, recovery.img)
 echo        that you intend to flash.  Place them in a folder on your computer where you can
@@ -127,6 +128,8 @@ REM -------------------------------------------------------------------------
 REM 2. Unlock Bootloader using PotatoNV ( required)
 REM -------------------------------------------------------------------------
 
+cls
+call logo
 echo.
 echo [36m**2. Unlock Bootloader using PotatoNV (required)**[0m
 echo.
@@ -143,7 +146,7 @@ echo    Be extremely careful with planar cables!
 echo    These cables are used in tablets, as well as in phones with a fingerprint scanner on the back cover.
 echo    You will need: a hair dryer, a guitar pick or a plastic card, conductive tweezers and maybe a screwdriver.
 echo.
-echo    [36ma. Turn off the device.[0m
+echo    [36ma. Turning off the device...[0m
 echo        adb shell reboot -p
 echo.
 echo    [36mb. Heat the back cover evenly with a hair dryer.[0m
@@ -155,10 +158,13 @@ echo    [36md. Move around the perimeter of the back cover, peeling off glue.[
 echo.
 echo    [36me. Now you can remove the back cover.[0m
 echo.
+pause
+cls
+call logo
 echo.
 echo [36m**Entering download mode**[0m
 echo.
-echo    It's time to Google. You need to find the location of a special point on the motherboard – testpoint.
+echo    It's time to Google. You need to find the location of a special point on the motherboard: testpoint.
 echo.
 echo    [33mNote[0m
 echo    If you are wondering why you need to do something with the unfortunate testpoint,
@@ -175,17 +181,23 @@ echo.
 echo    If the device has not been detected, make sure you are using a good cable,
 echo    the tweezers are not a dielectric, and you are shorting the desired point.
 echo.
+pause
+cls
+call logo
+echo.
 echo [36m**Unlocking the bootloader**[0m
 echo    Requirements:
 echo    Install HiSuite.
 echo    Install Huawei Testpoint Drivers.
 echo.
 echo    Note: All bootloaders are flashing to RAM, so an incorrect bootloader cannot harm the device.
-echo    Note: Disable FBLOCK checkbox disables a special security check. That modification allows you to flash/erase secure partitions or execute oem commands, that are not available with normal unlocking by unlock code [USERLOCK].
+echo    Note: Disable FBLOCK checkbox (in PotatoNV) disables a special security check. That modification allows you to flash/erase secure partitions or execute oem commands, that are not available with normal unlocking by unlock code [USERLOCK].
 echo    Warning: FBLOCK unlocking works correctly only on devices with Kirin 960 or 65x. Disabling this option can cause serious problems on legacy devices.
-echo    Okay, now refer to this table and select the appropriate bootloader.
-echo    Press the Start button. The procedure will take no more than a minute. The program should write a new unlock code, keep it in a safe place.
-
+echo    Now the program will start to detect your phone and chipset. Please plug your phone to your PC (allow ADB auth too) and press Enter.
+pause
+cls
+call logo
+echo.
 REM Use PowerShell to get the Windows version
 for /f "tokens=2 delims==" %%i in ('%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -Command "$([Environment]::OSVersion.Version.Major)"') do set "win_version=%%i"
 echo [36m**DETECT DEVICE**[0m
@@ -197,7 +209,9 @@ del manufacturer.txt model.txt
 echo Manufacturer: %manufacturer%
 echo Model: %model%
 IF "%manufacturer%"=="Huawei" OR "%manufacturer%"=="HW" (
-    echo Device detected: Huawei %model%
+    echo Device detected: Huawei %model% - Your phone maybe supported/unsupported. Please refer to the Support Deivce board. 
+    echo Close the program now, unplug your device if your chipset is not supported.
+    echo Or else, your phone will turned to brick.
     echo [36m**DETECT CHIPSET**[0m
     adb shell getprop ro.board.platform > chipset.txt
     set /p chipset=<chipset.txt
@@ -206,11 +220,13 @@ IF "%manufacturer%"=="Huawei" OR "%manufacturer%"=="HW" (
     IF "%chipset%"=="mtk" OR "%chipset%"=="Qualcomm" OR "%manufacturer%"=="mediatek" (
         echo.
         echo [36mAlternatives to PotatoNV - HCU Client**[0m
+        echo.
         echo As far as I know, there is currently only one tool that can deal with newer CPUs — HCU Client.
         echo This software requires a license, the most affordable plan is 3 days of access for €19.
         echo See supported models by HCU Client here: https://hcu-client.com/supported-models.php
         echo Note: Timed licenses are locked to the first used PC for two days. Therefore, it would be problematic to use such a license on more than one phone.
         echo Disclaimer: I am not affiliated, associated, authorized, endorsed by, or in any way officially connected with UAB Digiteka, or any of its subsidiaries or its affiliates, including DC-Phoenix and HCU Client.
+        echo.
         pause
         exit /b
     )
@@ -319,7 +335,8 @@ pause
 REM -------------------------------------------------------------------------
 REM 4. Flash Custom Recovery and System
 REM -------------------------------------------------------------------------
-
+cls
+call logo
 echo.
 echo [36m**4. Flash Custom Recovery and System**[0m
 echo.
@@ -332,6 +349,10 @@ echo.
 echo    c.  Make sure, the phone is in fastboot mode.
 echo.
 echo    d.  ROM MUST BE AS SYSTEM.IMG. OR ELSE YOU NEED TO FLASH WITH TWRP.
+echo        If your ROM is not System.img, you can skip this step.
+echo        Note: All ROM are flashing to partition, but an incorrect ROM cannot harm the device.
+echo        Because when the phone received the ROM, fastboot check for format, metadata, etc.
+echo        If the ROM failed the check, fastboot refuses to flash.
 echo.
 echo    [36mIMPORTANT: Place the system.img and recovery.img files in the same directory as this script before proceeding.[0m
 echo.
@@ -353,6 +374,8 @@ if /i "%flash_choice%"=="y" (
 REM -------------------------------------------------------------------------
 REM 5. Wipe Data (Optional, but often required)
 REM -------------------------------------------------------------------------
+cls
+call logo
 echo.
 echo [36m**5. Wipe Data (Optional, but often required)**[0m
 echo.
@@ -364,10 +387,17 @@ echo    b.  If you are flashing a custom ROM, it is highly recommended to wipe d
 echo.
 echo    c.  The following command will wipe data.
 echo.
+echo    d.  This is required because when you don't wipe data, you CAN boot normally, but the system will ask you
+echo    for wipe data because verify failed. (idk maybe something)
+echo.
+echo    Mostly eRecovery will showing "Serious problem can't boot etc." before booting the OS. Ask user to wipe their data.
+echo.
 fastboot -w
 REM -------------------------------------------------------------------------
 REM 6. Reboot the device
 REM -------------------------------------------------------------------------
+cls
+call logo
 echo.
 echo [36m**6. Reboot the device**[0m
 echo.
@@ -378,8 +408,19 @@ echo.
 echo    Your device will now reboot.  The first boot after flashing a custom ROM may take
 echo    several minutes.  Be patient and do not interrupt the process.
 echo.
+echo    If you are getting bootloop, you can run this guide again, replace the system.img/recovery.img, and try again to flash.
+echo.
+echo    Happy modding!
 echo.
 echo [32m========================================================================[0m
 echo [32m                               Finished! Enjoy!                                  [0m
 echo [32m========================================================================[0m
 pause
+exit
+
+:logo
+echo.
+echo [32m========================================================================[0m
+echo [32m         HWTool (Huawei Kirin Tool) (PotatoNV & Fastboot)[0m
+echo [32m========================================================================[0m
+echo.
