@@ -20,6 +20,7 @@
 ---
 ## 📃 TO-DO List
 - [ ] make updater (69420 days left)
+    - in this time you need to check updates manually (i dont want to make a updater)
 - [ ] reach 100 star
 - [x] fix bugs
 - [x] done (basic) README
