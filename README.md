@@ -91,7 +91,7 @@ For more details, refer to the [PotatoNV GitHub repository](https://github.com/m
 ### 📂 Requirements:
 
 1. **ADB** tools installed and configured on your computer.  
-2. Download and install **PotatoNV** (not included in HWTool).  
+2. Download and install **PotatoNV** (not included in HWTool - extract to "bin" folder).  
    - Refer to the [PotatoNV GitHub repository](https://github.com/mashed-potatoes/PotatoNV).  
 3. Obtain compatible files:
    - Android versions **8** or **9**.
