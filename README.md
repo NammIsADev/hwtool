@@ -19,15 +19,15 @@
 
 ---
 ## 📃 TO-DO List
-- [ ] make updater
+- [ ] make updater (69420 days left)
 - [ ] reach 100 star
 - [x] fix bugs
 - [x] done (basic) README
 - [x] done (advanced) README
 - [x] add LICENSE
-- [ ] complete wiki and the issue template (just the issue template get done)
+- [x] complete wiki and the issue template 
 - [x] add tags to README
-- [ ] developing
+- [x] developing
 - [x] sleep
 - [ ] release stable version
 
