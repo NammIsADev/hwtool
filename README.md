@@ -9,7 +9,12 @@
 </div>
 
 ---
+## 📃 TO-DO List
+- [ ] make updater
+- [ ] reach 100 star
+- [x] fix bugs
 
+---
 ## 📜 Table of Contents
 
 <details>
@@ -37,7 +42,7 @@
 
 By using HWTool, you agree to the following terms:
 
-> **Caution:**  
+> [!CAUTION]  
 > - Unlocking your bootloader **voids your warranty**.  
 > - I am **not responsible for any damages**, including but not limited to:  
 >   - Bricked devices  
