@@ -19,9 +19,9 @@
 
 ---
 
-## ⌚ Update time
-Stable: 2 month
-Beta: 1 month
+## ⌚ Update Time
+- Stable: 2 month
+- Beta: 1 month
 
 ---
 
