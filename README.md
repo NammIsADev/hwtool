@@ -18,6 +18,13 @@
 </div>
 
 ---
+
+## ⌚ Update time
+Stable: 2 month
+Beta: 1 month
+
+---
+
 ## 📃 TO-DO List
 - [ ] make updater (69420 days left)
     - in this time you need to check updates manually (i dont want to make a updater)
