@@ -139,6 +139,7 @@ For more details, refer to the [PotatoNV GitHub repository](https://github.com/m
    - **TWRP** recovery.  
    - A custom **ROM** suitable for your device.  
 4. Backup all important data to avoid any loss during the process.
+5. Windows 11/10 any version - I didn't test Insider yet, but atleast HWTool on Windows 11 Insider Canary worked! 
 
 ### 🛠 Steps:
 
