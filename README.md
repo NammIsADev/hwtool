@@ -21,7 +21,7 @@ https://protectukrainenow.org/
 [![Release Channel](https://img.shields.io/badge/Release%20Channel-Stable-green)](https://github.com/NammIsADev/hwtool/releases)
 [![Bootloader Unlock](https://img.shields.io/badge/Kirin%20Bootloader%20Unlock-Supported-blue)](#-what-is-hwtool)
 [![Custom ROM Support](https://img.shields.io/badge/Custom%20ROM%20and%20Recovery-Supported-purple)](#-getting-started)
-[![Code Quality](https://img.shields.io/badge/Code%20Quality-B%2B-orange?logo=codefactor)
+![Code Quality](https://img.shields.io/badge/Code%20Quality-B%2B-orange?logo=codefactor)
 
 </div>
 
