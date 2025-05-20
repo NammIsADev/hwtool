@@ -1,5 +1,5 @@
 @echo off
-Title Huawei Kirin Tool - ver Beta (PROCEED WITH CAUTION! MAY BRICK YOUR DEVICE!)
+Title Huawei Kirin Tool - ver 1.1 Stable (PROCEED WITH CAUTION! MAY BRICK YOUR DEVICE!)
 echo.
 echo  *****************************************************************************
 echo  * Welcome to Huawei Kirin Tool.                                             *
