@@ -27,6 +27,12 @@ https://protectukrainenow.org/
 
 ---
 
+# NOTE: I will focus on this project: https://github.com/NammIsADev/OptimizedToolsPlusPlus
+# hwtool may die/be abandoned.
+# at least every 4 - 6 months I will release a version as hotfix, if there are any serious bugs I will fix them.
+
+---
+
 ## ⌚ Update Time
 - Stable: 2 month
 - Beta: 3 month
