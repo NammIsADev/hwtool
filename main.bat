@@ -27,31 +27,21 @@ echo    [31m* before flashing it! YOU are choosing to make these modifications,
 echo    [31m* you point the finger at me for messing up your device, I will laugh at you.    *[0m
 echo    [31m********************************************************************************[0m
 echo.
-echo    [33mUnlocking your bootloader will void your warranty.[0m
+echo    [33mBack up all your important data before proceeding.[0m
 echo.
-echo    [33mThis process can potentially brick your device if not followed carefully.[0m
-echo.
-echo    [33mEnsure you have backed up all your important data before proceeding.[0m
-echo.
-echo    This script assumes you have ADB and Fastboot tools installed and configured on your computer.
-echo.
-echo    This script is tailored for Huawei devices that require PotatoNV for bootloader unlocking.
+echo    This script is tailored for Huawei devices that require Kirin chipset for bootloader unlocking.
 echo.
 echo    Works best on EMUI 8/9 (Tested).  
 echo    It may not work on EMUI 10 or later.
 echo.
 echo 	[33mThis script does NOT include PotatoNV. YOU MUST DOWNLOAD IT SEPARATELY.[0m
-echo			https://github.com/mashed-potatoes/PotatoNV
+echo	    https://github.com/mashed-potatoes/PotatoNV
 echo.
 echo    Carefully check the supported devices list on the PotatoNV GitHub page:
 echo        https://github.com/NammIsADev/hwtool/blob/main/SUPPORT-DEVICES.md
-echo        to confirm your device is supported.
-echo 	Maybe your phone isn't on the supported list, but if the chipset is supported, 
-echo 		you're still good to go.
 echo.
-echo    This script provides a general outline. Specific steps and commands might vary slightly
-echo        depending on your exact Huawei model and Android version.  Refer to detailed guides
-echo        for your specific device.
+echo 	Maybe your phone isn't on the supported list, but if the chipset is supported, 
+echo 	you're still good to go.
 echo.
 echo    This script is intended to support devices with the following Kirin chipsets:
 echo        - Kirin 620
@@ -72,7 +62,7 @@ REM 1. Device Preparation
 REM -------------------------------------------------------------------------
 
 echo.
-echo [36m**1. Device Preparation**[0m
+echo [36m**1. Device preparation**[0m
 echo.
 echo    [36ma. Enable Developer Options on your Huawei device:[0m
 echo        -   Go to Settings ^> About phone.
@@ -83,7 +73,9 @@ echo        -   Go to Settings ^> Developer options.
 echo        -   Enable "USB debugging".
 echo        -   Enable "OEM unlocking".
 echo.
-echo    [36mc. Open Settings on your Huawei device to the About Phone section:[0m
+echo     Please connect your device, allow it and press enter.
+pause >nul
+echo    [36mc. Opening the Settings app on your device...[0m
 adb shell am start -n com.android.settings/.Settings
 adb shell am start -a android.settings.DEVICE_INFO_SETTINGS
 echo.
@@ -91,36 +83,35 @@ echo    [36md. Did the Settings app open successfully? (y/n)[0m
 set /p "settings_open="
 echo.
 if /i "%settings_open%"=="n" (
-    echo [33mPlease open the Settings app manually and navigate to the About Phone section.[0m
+    echo [33mPlease open the Settings app manually.[0m
     pause
 )
 echo.
-echo    [36me. If the "OEM unlocking" option is missing or grayed out, this often indicates that PotatoNV is required,[0m
-echo        however, it may also indicate other issues preventing bootloader unlocking.  Consult device-specific resources.
+echo    [36me. If the "OEM unlocking" option is missing or grayed out, your device can't be unlocked.[0m
+echo    Press enter to continue.
+pause >nul
 echo.
 pause
 cls
 call logo
 echo.
-echo    [36mf. Install Huawei USB Drivers on your computer (if not already installed).[0m
+echo    [36mf. Install HiSuite on your computer (if not already installed).[0m
 echo        Download HiSuite from: https://consumer.huawei.com/en/support/hisuite/
-echo        You may also need to install Huawei Testpoint Drivers.  These drivers may require Test Mode in Windows.
-echo        To enable Test Mode in Windows:
+echo.
+echo        You may also need to install Huawei Testpoint Drivers. Download link below.
+echo        https://files.dc-unlocker.com/share.html?v=share/18B15B9D02C945A79B1967234CECB423
+echo.
+echo        You need to enable Test Mode in Windows, here's how:
 echo        1.  Run Command Prompt as an administrator.
 echo        2.  Type the following command and press Enter:
 echo            [32mbcdedit /set testsigning on[0m
 echo        3.  Restart your computer. A watermark will appear on the desktop indicating Test Mode.
-echo        To disable Test Mode, repeat the steps above, but use the command:
-echo            [32mbcdedit /set testsigning off[0m
-echo        You can find Huawei TestPoint drivers here:
-echo        https://files.dc-unlocker.com/share.html?v=share/18B15B9D02C945A79B1967234CECB423
 echo.
-echo    [36mg. Download the PotatoNV tool for your device from a trusted source and extract to "bin" folder.[0m
+echo    [36mg. Download the PotatoNV tool and extract to "bin" folder.[0m
 echo        https://github.com/mashed-potatoes/PotatoNV
 echo.
 echo    [36mh. Download the custom ROM and recovery image files (e.g., system.img, recovery.img)
-echo        that you intend to flash.  Place them in a folder on your computer where you can
-echo        easily access them (e.g., the "flash" as this batch script).  Ensure that the
+echo        that you intend to flash.  Place them in "flash" folder. Ensure that the
 echo        system image is named "system.img" and the custom recovery image is named "recovery.img".
 echo.
 pause
@@ -139,24 +130,24 @@ echo    If you're not sure that you have enough experience to disassemble the de
 echo    then consider using paid software, that supports "software testpoint".
 echo.
 echo    [33mWarning[0m
-echo    I strongly recommend watching video manuals for disassembling your device.  A video guide on how to use PotatoNV and testpoint can be found here: https://www.youtube.com/watch?v=YkGugQ019ZY
+echo    I strongly recommend watching video manuals for disassembling your device.  
+echo    A video guide on how to use PotatoNV and testpoint can be found here: https://www.youtube.com/watch?v=YkGugQ019ZY
 echo.
 echo    [33mWarning[0m
 echo    Be extremely careful with planar cables!
 echo    These cables are used in tablets, as well as in phones with a fingerprint scanner on the back cover.
+echo.
 echo    You will need: a hair dryer, a guitar pick or a plastic card, conductive tweezers and maybe a screwdriver.
 echo.
 echo    [36ma. Turning off the device...[0m
-echo        adb shell reboot -p
+adb shell reboot -p
 echo.
 echo    [36mb. Heat the back cover evenly with a hair dryer.[0m
 echo.
 echo    [36mc. After a couple of minutes, try to stick the plastic card into the corner between case and lid,[0m
 echo        try to lift the edge and then deepen the card.
 echo.
-echo    [36md. Move around the perimeter of the back cover, peeling off glue.[0m
-echo.
-echo    [36me. Now you can remove the back cover.[0m
+echo    [36me. After lift the edge, you can remove the back cover.[0m
 echo.
 pause
 cls
@@ -167,15 +158,21 @@ echo.
 echo    It's time to Google. You need to find the location of a special point on the motherboard: testpoint.
 echo.
 echo    [33mNote[0m
-echo    If you are wondering why you need to do something with the unfortunate testpoint,
-echo    then read the contents of the spoiler below.
 echo    To search, use the model name before the hyphen + "testpoint".
 echo    For example for Honor 9 Lite (LLD-L31) you should Google "lld testpoint".
 echo.
-echo    Here you will need sleight of hand: This usually involves short-circuiting specific
-echo        test points on the motherboard while plugging in the USB cable.
+echo    The marks may vary:
 echo.
-echo    Open the "Device Manager" – you should see an unknown device named USB SER,
+echo    - Only one point is marked in the photo.
+echo    - In the photo, a line is drawn between the point and the metal shield.
+echo    - In the photo, a line is drawn between two points.
+echo.
+echo    You need to press the testpoint with a pair of tweezers, with the nearest iron/aluminum part, for example:
+echo.
+echo    You press the testpoint at the tip of tweezers 1, the tip of 
+echo    tweezers 2 you press on the iron/aluminum part, such as the cpu heatsink, ...
+echo.
+echo    Open the "Device Manager" – you should see an device (Port, COM) named USB SER,
 echo    or Serial Port HUAWEI USB COM 1.0.
 echo.
 echo    If the device has not been detected, make sure you are using a good cable,
@@ -186,14 +183,16 @@ cls
 call logo
 echo.
 echo [36m**Unlocking the bootloader**[0m
-echo    Requirements:
-echo    Install HiSuite.
-echo    Install Huawei Testpoint Drivers.
 echo.
 echo    Note: All bootloaders are flashing to RAM, so an incorrect bootloader cannot harm the device.
-echo    Note: Disable FBLOCK checkbox (in PotatoNV) disables a special security check. That modification allows you to flash/erase secure partitions or execute oem commands, that are not available with normal unlocking by unlock code [USERLOCK].
+echo.
+echo    Note: Disable FBLOCK checkbox (in PotatoNV) disables a special security check.
+echo    That will allow you to flash/erase secure partition.
+echo.
 echo    Warning: FBLOCK unlocking works correctly only on devices with Kirin 960 or 65x. Disabling this option can cause serious problems on legacy devices.
-echo    Now the program will start to detect your phone and chipset. Please plug your phone to your PC (allow ADB auth too) and press Enter.
+echo.
+echo    Now the program will start to detect your phone and chipset. 
+echo    Please plug your phone to your PC (allow ADB auth too) and press Enter.
 pause
 cls
 call logo
@@ -247,16 +246,10 @@ IF %win_version% GEQ 10 (
     echo    [36ma.  Are you ready to proceed with the bootloader unlock process? (y/n)[0m
     set /p "ready_to_unlock="
      IF /i "%ready_to_unlock%"=="y" (
-        echo    [36mb.  Power off your Huawei device.[0m
+        echo    [36mb.  Powering off your Huawei device...[0m
         adb shell reboot -p
         echo.
-        echo    [36mc.  Disassemble your Huawei device to access the motherboard test points.[0m
-        echo        Follow a video guide specific to your Huawei model.
-        echo.
-        echo    [36md.  Connect your device to your computer when touching test point, as[0m
-        echo        described in the PotatoNV instructions.
-        echo.
-        echo    [36me.  Run the PotatoNV tool.[0m
+        echo    [36me.  Running the PotatoNV tool.[0m
         if exist "%cd%\bin\PotatoNV.exe" (
              start "" "%cd%\bin\PotatoNV.exe"
         ) else (
@@ -311,15 +304,15 @@ IF %win_version% GEQ 10 (
 		)
 	)
         echo.
-        echo    [36mf.  Follow the instructions in the PotatoNV tool to unlock the bootloader.  This process[0m
-        echo        may involve selecting the correct COM port and initiating the unlock.
+        echo    Okay, now refer to Supported Devices table and select the appropriate bootloader.
+        echo    Press the Start button. 🪄
         echo.
         echo    [36mg.  If PotatoNV provides an unlock code, write it down.  You will need it later.[0m
         echo.
         echo     [36mh.  Enter the unlock code provided by PotatoNV: (format: fastboot oem unlock YOUR_CODE_HERE)[0m
         set /p "unlock_code="
-		echo	[36mi.  Reboot the phone to fastboot mode. (press Volume Down + Power + Cable Connect)
-		echo	[36m    Please press [Enter] when you are done.
+		echo	Reboot the phone to fastboot mode. (press Volume Down + Power + Cable Connect)
+		echo	Please press [Enter] when you are done.
 		pause
         fastboot oem unlock %unlock_code%
         echo.
@@ -405,7 +398,7 @@ echo    a.  After flashing and wiping data, this command reboot your device.
 echo.
 fastboot reboot
 echo.
-echo    Your device will now reboot.  The first boot after flashing a custom ROM may take
+echo    Your device will now reboot.  The first boot after flashing a custom ROM/boot stock ROM may take
 echo    several minutes.  Be patient and do not interrupt the process.
 echo.
 echo    If you are getting bootloop, you can run this guide again, replace the system.img/recovery.img, and try again to flash.
