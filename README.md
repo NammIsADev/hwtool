@@ -17,7 +17,7 @@ https://protectukrainenow.org/
 
 ![Build Status](https://img.shields.io/badge/Test-Passing-green?logo=github)
 [![Development Status](https://img.shields.io/badge/Status-Active%20Development-blue)](https://github.com/NammIsADev/hwtool/commits/main/)
-[![App Version](https://img.shields.io/badge/Version-1.0.1-green)](https://github.com/NammIsADev/hwtool/releases)
+[![App Version](https://img.shields.io/badge/Version-1.1-green)](https://github.com/NammIsADev/hwtool/releases)
 [![Release Channel](https://img.shields.io/badge/Release%20Channel-Stable-green)](https://github.com/NammIsADev/hwtool/releases)
 [![Bootloader Unlock](https://img.shields.io/badge/Kirin%20Bootloader%20Unlock-Supported-blue)](#-what-is-hwtool)
 [![Custom ROM Support](https://img.shields.io/badge/Custom%20ROM%20and%20Recovery-Supported-purple)](#-getting-started)
@@ -29,7 +29,7 @@ https://protectukrainenow.org/
 
 ## ⌚ Update Time
 - Stable: 2 month
-- Beta: 1 month
+- Beta: 3 month
 
 ---
 
@@ -46,7 +46,6 @@ https://protectukrainenow.org/
 - [x] developing
 - [x] sleep
 - [x] release stable version
-- [ ] gui (maybe 1.0.3?)
 - [x] cli
 
 icl ts pmo sm n sb rn ngl, ru srsly srs n fr rn vro? lol atp js go b fr vro, idek nm, brb gng gtg atm Imao, bt ts pyo 2 js Imk lol onb fr nty b fr rn lk 💔💔💔
