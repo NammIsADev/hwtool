@@ -17,7 +17,7 @@ https://protectukrainenow.org/
 
 ![Build Status](https://img.shields.io/badge/Test-Passing-green?logo=github)
 [![Development Status](https://img.shields.io/badge/Status-Active%20Development-blue)](https://github.com/NammIsADev/hwtool/commits/main/)
-[![App Version](https://img.shields.io/badge/Version-1.0.0-green)](https://github.com/NammIsADev/hwtool/releases)
+[![App Version](https://img.shields.io/badge/Version-1.0.1-green)](https://github.com/NammIsADev/hwtool/releases)
 [![Release Channel](https://img.shields.io/badge/Release%20Channel-Stable-green)](https://github.com/NammIsADev/hwtool/releases)
 [![Bootloader Unlock](https://img.shields.io/badge/Kirin%20Bootloader%20Unlock-Supported-blue)](#-what-is-hwtool)
 [![Custom ROM Support](https://img.shields.io/badge/Custom%20ROM%20and%20Recovery-Supported-purple)](#-getting-started)
